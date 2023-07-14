@@ -1,0 +1,64 @@
+/* Colors */
+:root {
+   --color-primary: #55c57a;
+   --color-primary-light: #7ed56f;
+   --color-primary-dark: #28b485;
+   --color-grey-dark: #777;
+   --color-white: #fff;
+   --color-black: #000;
+   --color-grey-light-1: #f7f7f7;
+}
+
+/* Grid */
+:root {
+   --grid-width: 114rem;
+   --gutter-vertical: 8rem;
+   --gutter-horizontal: 6rem;
+}
+
+/* Font */
+:root {
+   --default-font-size: 1.6rem;
+}
+
+.composition {
+   position: relative;
+   align-items: center;justify-content: center;
+}
+
+.composition__photo {
+   width: 350px;
+   height: 250px;
+   object-fit: cover;
+   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+   position: absolute;
+   z-index: 10;
+   transition: all 0.2s;
+   outline-offset: 2rem;
+}
+
+.composition__photo--p1 {
+   left: 35%;
+   top: 6rem;
+}
+
+.composition__photo--p2 {
+   left: 45%;
+   top: 10rem;
+}
+
+.composition__photo--p3 {
+   left: 40%;
+   top: 14rem;
+}
+
+.composition__photo:hover {
+   outline: 1.5rem solid var(--color-primary);
+   transform: scale(1.05) translateY(-0.5rem);
+   box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+   z-index: 20;
+}
+
+.composition:hover .composition__photo:not(:hover) {
+   transform: scale(0.95);
+}

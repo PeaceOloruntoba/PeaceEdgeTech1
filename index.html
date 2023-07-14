@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Show Different Images on Hover</title>
+   <style>
+      /* Colors */
+:root {
+   --color-primary: #55c57a;
+   --color-primary-light: #7ed56f;
+   --color-primary-dark: #28b485;
+   --color-grey-dark: #777;
+   --color-white: #fff;
+   --color-black: #000;
+   --color-grey-light-1: #f7f7f7;
+}
+
+/* Grid */
+:root {
+   --grid-width: 114rem;
+   --gutter-vertical: 8rem;
+   --gutter-horizontal: 6rem;
+}
+
+/* Font */
+:root {
+   --default-font-size: 1.6rem;
+}
+
+.composition {
+   position: relative;
+   align-items: center;
+   justify-content: center;
+}
+
+.composition__photo {
+   width: 200px;
+   height: 150px;
+   object-fit: cover;
+   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+   position: absolute;
+   z-index: 10;
+   transition: all 0.2s;
+   outline-offset: 2rem;
+   border: none;
+}
+
+.composition__photo--p1 {
+   left: 35%;
+   top: 6rem;
+}
+
+.composition__photo--p2 {
+   left: 45%;
+   top: 10rem;
+}
+
+.composition__photo--p3 {
+   left: 40%;
+   top: 14rem;
+}
+
+.composition__photo--p4 {
+   left: 32%;
+   top: 18rem;
+}
+
+.composition__photo--p5 {
+   left: 45%;
+   top: 22rem;
+}
+
+.composition__photo:hover {
+   outline: none;
+   transform: scale(1.05) translateY(-0.5rem);
+   box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+   z-index: 20;
+}
+
+.composition:hover .composition__photo:not(:hover) {
+   transform: scale(0.95);
+}
+   </style>
+</head>
+<body>
+   <div class="composition">
+      <img
+         src="https://images.unsplash.com/photo-1675093517721-61b46b82dffc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=327&q=80"
+         alt="Photo 1" class="composition__photo composition__photo--p1" /><img
+         src="https://images.unsplash.com/photo-1675979060221-719173aae748?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=517&q=80"
+         alt="Photo 2" class="composition__photo composition__photo--p2" /><img
+         src="https://images.unsplash.com/photo-1675759082638-4584e61936f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=519&q=80"
+         alt="Photo 3" class="composition__photo composition__photo--p3" /><img
+         src="https://images.unsplash.com/photo-1675587031581-c4cfe4f3e01e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=330&q=80"
+         alt="Photo 4" class="composition__photo composition__photo--p4" /><img
+         src="https://images.unsplash.com/photo-1675749362457-6aa7f0b2df29?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=399&q=80"
+         alt="Photo 5" class="composition__photo composition__photo--p5" />
+   </div>
+</body>
+</html>
